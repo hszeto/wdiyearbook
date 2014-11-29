@@ -29,3 +29,15 @@
 	margin-top: 18px;
 	margin-right: 20px;
 }
+
+table td:empty {
+    width: 50px;
+}
+
+ul{
+    list-style-type: none;
+}
+ 
+li{
+	margin-bottom: 20px;
+} 

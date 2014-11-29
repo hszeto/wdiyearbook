@@ -1,7 +1,11 @@
-<div class="jumbotron">
-	
-<h1>Sign Up</h1>
+<!-- SIGN UP HTML PAGE -->
 
+<div class="jumbotron">
+<center>	
+<h1>Sign Up</h1>
+</center>
+
+<!-- Error Message -->
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
@@ -14,6 +18,8 @@
     </div>
   <% end %>
 
+<!-- User Input fields -->
+<center>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>
@@ -25,8 +31,8 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
-  </div>
+  </div><br>
   <div class="actions"><%= f.submit "Sign Up" %></div>
 <% end %>
-
+</center>
 </div>

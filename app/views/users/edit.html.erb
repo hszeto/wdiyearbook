@@ -1,9 +1,9 @@
+<!-- Edit User Profile HTML page -->
+
 <div class="jumbotron">
-<h1>User Profile</h1>
+<center><h1>User Profile</h1>
 
-HELLO <%= @user.email %>.
-
-    
+	<!-- Error Messages -->
 	<%= form_for @user do |f| %>
 	  <% if (@user.errors.any?) %>
 
@@ -17,7 +17,11 @@ HELLO <%= @user.email %>.
 	    </div>
 	  <% end %>
 
-
+<center>
+<table>
+  <tr>
+  	<td>
+	  <!-- Edit Fields -->
 	  <div class="field">
 	    <%= f.label :name, "Full Name:" %><br />
 	    <%= f.text_field :name %>
@@ -34,14 +38,16 @@ HELLO <%= @user.email %>.
 	    <%= f.label :post, "Leave a comment:" %><br />
 	    <%= f.text_field :post %>
 	  </div><br>
-
+	</td>
+	<td></td> <!-- Empty column for spacing -->
+	<td>
 	  <div class="field">
 		<%= f.label :avatar, "Post a photo:" %><br />
-		<%= f.file_field :avatar %>
-		<%= image_tag(@user.avatar) %>
+		<%= f.file_field :avatar %><br>
+		<%= image_tag(@user.avatar, width: '300') %>
 	  </div><br>
-
-	<!-- 
+	</td>
+	  <!-- No password update for now
 	  <div class="field">
 	    <%= f.label :password %><br />
 	    <%= f.password_field :password %>
@@ -50,6 +56,11 @@ HELLO <%= @user.email %>.
 	    <%= f.label :password_confirmation %><br />
 	    <%= f.password_field :password_confirmation %>
 	  </div> -->
+
+	  <!-- SUBMIT BUTTON -->
+	  <tr><td>
 	  <div class="actions"><%= f.submit "Update my info" %></div>
+	</tr><td>
 	<% end %>
+</center>
 </div>

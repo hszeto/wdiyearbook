@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+@import 'bootstrap';
+;
+.header_table{
+	width: 100%;
+	color: white;
+}
+.galogo{
+	width: 300px;
+	margin-left: 20px;
+}
+
+.header_signin{
+	float:right;
+	margin-top: 18px;
+	margin-right: 20px;
+}

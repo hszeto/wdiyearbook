@@ -24,7 +24,7 @@ $ rails g mongoid:config
 $ git init (and all the github setup)
 $ heroku create
 $ git push heroku master
-	http://mighty-beyond-2767.herokuapp.com/ deployed to Heroku
+	http://fast-garden-2381.herokuapp.com/ deployed to Heroku
 
 add this to application.js:
 	//= require bootstrap
@@ -37,21 +37,20 @@ add this to application.html.erb:
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
-$ rails g model user email location post password_digest 
-$ rails g model photo name
-$ rails g model userphoto user:references photo:references 
+$ rails g model User name email location post password_digest 
+$ rails g model Photo name
 
 add this to user.rb model:
-	has_many :userphotos
-	has_many :photos, through: :userphotos 
+	has_one :photo
+	has_secure_password
+	validates_uniqueness_of :email
 
 add this to photo.rb model:
-	has_many :userphotos
-	has_one :user, through: :userphotos 
+	belongs_to :user
 
 $ rake db:migrate
 
 $ rails g controller users
-$ rails g controller sessions
+$ rails g controller sessions new
 
 

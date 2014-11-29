@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 	        # sets the cookie to the browser
 	        session[:user_id] = user.id.to_s #I DON'T UNDERSTAND WHY WE NEED THIS LINE
 	        # redirect_to profile_path
-	        redirect_to :controller => 'users', :action => 'edit', :user_id => user.id.to_s
+	        redirect_to edit_user_path(user)
 
 	    else
 	        flash.now.alert = "Email or password is invalid"

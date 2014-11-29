@@ -3,9 +3,10 @@
 
 HELLO <%= @user.email %>.
 
-
+    
 	<%= form_for @user do |f| %>
-	  <% if @user.errors.any? %>
+	  <% if (@user.errors.any?) %>
+
 	    <div class="error_messages">
 	      <h2>Form is invalid</h2>
 	      <ul>
@@ -37,6 +38,7 @@ HELLO <%= @user.email %>.
 	  <div class="field">
 		<%= f.label :avatar, "Post a photo:" %><br />
 		<%= f.file_field :avatar %>
+		<%= image_tag(@user.avatar) %>
 	  </div><br>
 
 	<!-- 

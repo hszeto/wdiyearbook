@@ -44,7 +44,7 @@
 	  <div class="field">
 		<%= f.label :avatar, "Post a photo:" %><br />
 		<%= f.file_field :avatar %><br>
-		<%= image_tag(@user.avatar, width: '300') %>
+		<%= image_tag(@user.avatar, :class => "showimg") %>
 	  </div><br>
 	</td>
 	  <!-- No password update for now

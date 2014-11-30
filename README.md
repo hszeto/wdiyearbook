@@ -1,6 +1,6 @@
 $ rails new wdi1011yearbook -OT
 
-added Gems:
+Added Gems:
 	# Mongoid gem
 		gem 'mongoid', github: 'mongoid/mongoid'
 	# Heroku gem
@@ -28,26 +28,26 @@ $ heroku create
 $ git push heroku master
 	http://fast-garden-2381.herokuapp.com/ deployed to Heroku
 
-add this to application.js:
+Add this to application.js:
 	//= require bootstrap
 
-add this to application.css:
+Add this to application.css:
 	@import 'bootstrap';
 		change file name from application.css to application.css.scss
 
-add this to application.html.erb:
+Add this to application.html.erb:
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
 $ rails g model User name email location post password_digest 
 $ rails g model Photo name
 
-add this to user.rb model:
+Add this to user.rb model:
 	has_one :photo
 	has_secure_password
 	validates_uniqueness_of :email
 
-add this to photo.rb model:
+Add this to photo.rb model:
 	belongs_to :user
 
 $ rake db:migrate
@@ -55,4 +55,19 @@ $ rake db:migrate
 $ rails g controller users
 $ rails g controller sessions new
 
+Add this _gmap.html.erb. This partial page is for Google map.
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgN5AxJ2pKmQVP4ITrog8SFSkGwmh-fAE">
+	</script>
 
+Add this to application.css.scss for Google map styling.
+	 html, body, #map-canvas{
+	 	height: 100%; 
+	 	margin-left: 100px; 
+	 	margin-right: 100px;
+	 	margin-bottom: 20px;
+		}
+
+For Heroku deployment, follow this cheatsheet:
+	https://github.com/ga-students/WDI_LA_10-11/blob/master/cheatsheets/heroku_deploy_for_rails_mongoid.md
+
+	

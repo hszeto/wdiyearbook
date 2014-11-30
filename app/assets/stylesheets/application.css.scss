@@ -24,6 +24,14 @@
 	margin-left: 20px;
 }
 
+.showimg {
+    display: block;
+    max-width:400px;
+    max-height:200px;
+    width: auto;
+    height: auto;
+}
+
 .header_signin{
 	float:right;
 	margin-top: 18px;
@@ -39,7 +47,7 @@ ul{
 }
  
 li{
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 } 
 
  /* Styling for Google map */
@@ -48,7 +56,6 @@ li{
  	margin-left: 100px; 
  	margin-right: 100px;
  	margin-bottom: 20px;
-
  }
 
 

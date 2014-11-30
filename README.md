@@ -17,6 +17,8 @@ added Gems:
 		gem 'bcrypt', '~> 3.1.7'
 	# comment out gem 'spring'
 	# gem 'spring',        group: :development
+ 	# GeoCoder
+		gem 'geocoder'
 
 $ bundle 
 $ rails g mongoid:config

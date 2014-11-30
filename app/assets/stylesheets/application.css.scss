@@ -14,7 +14,7 @@
  *= require_self
  */
 @import 'bootstrap';
-;
+
 .header_table{
 	width: 100%;
 	color: white;
@@ -41,3 +41,14 @@ ul{
 li{
 	margin-bottom: 20px;
 } 
+
+ /* Styling for Google map */
+ html, body, #map-canvas{
+ 	height: 100%; 
+ 	margin-left: 100px; 
+ 	margin-right: 100px;
+ 	margin-bottom: 20px;
+
+ }
+
+

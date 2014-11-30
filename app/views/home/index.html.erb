@@ -1,17 +1,19 @@
 <!-- List Everybody on Home Page -->
 <center>
-<div class="container-fluid">
+<div class="container-fluid" >
 <div class="row">
 
 <ul>
-<%= @users.each do |f| %>
-	<li class="col-xs-6 col-md-4">
-		<%= image_tag(f.avatar, width: '200') %><br>
-		<%= f.name %>
-	</li>
-<% end %>
+	<%= @users.each do |f| %>
+		<li class="col-xs-6 col-md-4">
+			<%= image_tag(f.avatar, width: '200px') %><br>
+			<%= link_to f.name, user_path(f.id) %> 
+		</li>
+	<% end %>
 </ul>
 
 </div>
 </div>
 </center>
+<hr>
+	<%= render partial: 'gmap' %>

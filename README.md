@@ -67,6 +67,13 @@ Add this to application.css.scss for Google map styling.
 	 	margin-bottom: 20px;
 		}
 
+Add this to user.rb model for Google map:
+	include Geocoder::Model::Mongoid
+	kfield :coordinates, :type => Array
+	geocoded_by :location
+  	after_validation :geocode, :if => :location_changed?
+
+
 For Heroku deployment, follow this cheatsheet:
 	https://github.com/ga-students/WDI_LA_10-11/blob/master/cheatsheets/heroku_deploy_for_rails_mongoid.md
 

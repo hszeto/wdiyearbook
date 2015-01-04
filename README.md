@@ -5,7 +5,7 @@ Added Gems:
 		gem 'mongoid', github: 'mongoid/mongoid'
 	# Heroku gem
 		gem 'rails_12factor'
-	# Bootstrape gem
+	# Bootstrap gem
 		gem 'bootstrap-sass', '~> 3.2.0'
 	# SPA pages gem
 		gem 'bower-rails'

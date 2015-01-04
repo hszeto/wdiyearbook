@@ -4,7 +4,7 @@
 <div class="row">
 
 <ul>
-	<%= @users.each do |f| %>
+	<% @users.each do |f| %>
 		<li class="col-xs-6 col-md-4">
 			<%= image_tag(f.avatar, :class => "showimg") %><br>
 			<%= link_to f.name, user_path(f.id) %>
@@ -17,4 +17,3 @@
 </center>
 <hr>
 	<%= render partial: 'gmap' %>  <!-- Google map partial code -->
-	

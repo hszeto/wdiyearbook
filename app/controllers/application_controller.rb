@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-	before_filter :authorize
+  before_filter :authorize
 
 private
 
@@ -13,6 +13,7 @@ private
   helper_method :current_user
 
   def authorize
+    # current_user ||= User.find(session[:user_id]) if session[:user_id] 
     redirect_to new_session_path, alert: "Not authorized" if current_user.nil?
   end
   

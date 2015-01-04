@@ -1,9 +1,14 @@
 source 'https://rubygems.org'
-
+group :development do
+	gem 'better_errors'
+	gem 'binding_of_caller'
+end
 # Mongoid gem
 gem 'mongoid', github: 'mongoid/mongoid'
 # Heroku gem
 gem 'rails_12factor'
+# Amazon S3
+gem 'aws-sdk'
 # Bootstrape gem
 gem 'bootstrap-sass', '~> 3.2.0'
 # SPA pages gem

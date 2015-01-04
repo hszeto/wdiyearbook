@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
 skip_before_filter :authorize
 
-	def index
+    def index
     end
 
 # ----------------------- Show User -----------------   
@@ -18,7 +18,7 @@ skip_before_filter :authorize
         @current_user = current_user
         @user = User.new(user_params)
         if @user.save
-        	session[:user_id] = @user.id  #I DON'T UNDERSTAND WHY WE NEED THIS LINE
+            session[:user_id] = @user.id.to_s  #I DON'T UNDERSTAND WHY WE NEED THIS LINE
             redirect_to edit_user_path(@user)
         else
             render "new"
@@ -26,20 +26,20 @@ skip_before_filter :authorize
     end
 
 # ----------------------- Edit USER -----------------
-	def edit
-		@user = User.find(params[:id])
-		@current_user ||= @user 
-	end
-	def update
-		@user = User.find(params[:id])
-		@current_user ||= @user 
-		if @user.update_attributes(params.require(:user).permit(:name, :email, :location, :post, :avatar))
-	  		redirect_to edit_user_path(@user)
-	  		#redirect_to :controller => 'users', :action => 'edit', :user_id => @user.id
-		else
-	  		render 'edit'
-		end
-	end
+    def edit
+        @user = User.find(params[:id])
+        @current_user ||= @user 
+    end
+    def update
+        @user = User.find(params[:id])
+        @current_user ||= @user 
+        if @user.update_attributes(params.require(:user).permit(:name, :email, :location, :post, :avatar))
+            redirect_to edit_user_path(@user)
+            #redirect_to :controller => 'users', :action => 'edit', :user_id => @user.id
+        else
+            render 'edit'
+        end
+    end
 
 # ----------------------- User Params ---------------
     private
@@ -47,4 +47,3 @@ skip_before_filter :authorize
         params.require(:user).permit(:name, :email, :location, :post, :password, :password_confirmation, :avatar)
     end
 end
-

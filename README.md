@@ -74,7 +74,7 @@ Add this to user.rb model for Google map:
   	after_validation :geocode, :if => :location_changed?
 
 
-For Heroku deployment, follow this cheatsheet:
+For Heroku deployment, follow this:
 	https://github.com/ga-students/WDI_LA_10-11/blob/master/cheatsheets/heroku_deploy_for_rails_mongoid.md
 
 	

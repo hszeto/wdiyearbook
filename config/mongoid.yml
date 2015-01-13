@@ -1,7 +1,7 @@
 production: 
   sessions:
     default:
-      uri: <%= ENV['CLOUDINARY_URL'] %>
+      uri: <%= ENV['MONGOHQ_URL'] %>
 development:
   # Configure available database sessions. (required)
   sessions:

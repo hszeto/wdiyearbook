@@ -7,8 +7,8 @@ end
 gem 'mongoid', github: 'mongoid/mongoid'
 # Heroku gem
 gem 'rails_12factor'
-# upload pix to Amazon S3
-gem 'carrierwave_direct'
+# Amazon S3
+gem 'aws-sdk'
 # Bootstrape gem
 gem 'bootstrap-sass', '~> 3.2.0'
 # SPA pages gem

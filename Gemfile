@@ -7,8 +7,10 @@ end
 gem 'mongoid', github: 'mongoid/mongoid'
 # Heroku gem
 gem 'rails_12factor'
-# Amazon S3
-gem 'aws-sdk'
+	# 01/13/2015: not using S3 any more. It's a pain to config.
+	# Switched to MongoLab Sandbox. Free 496Mb storage.
+		# Amazon S3
+		#gem 'aws-sdk'
 # Bootstrape gem
 gem 'bootstrap-sass', '~> 3.2.0'
 # SPA pages gem

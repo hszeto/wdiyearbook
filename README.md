@@ -77,4 +77,6 @@ Add this to user.rb model for Google map:
 For Heroku deployment, follow this:
 	https://github.com/ga-students/WDI_LA_10-11/blob/master/cheatsheets/heroku_deploy_for_rails_mongoid.md
 
-	
+For photo hosting, MongoLab is used. Changed mongoid.yml:
+	from: uri: <%= ENV['MONGOHQ_URL'] %> 
+	to: uri: <%= ENV['MONGOLAB_URI'] %>	

@@ -12,6 +12,7 @@ gem 'rails_12factor'
 gem 'carrierwave',             '0.10.0'
 gem 'mini_magick',             '3.8.0'
 gem 'fog',                     '1.23.0'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 # Bootstrape gem
 gem 'bootstrap-sass', '~> 3.2.0'
 # SPA pages gem

@@ -13,7 +13,7 @@ class Photo
       :medium   => ['250x250',    :jpg],
       :large    => ['500x500>',   :jpg]
     }
-    mount_uploader :avatar, AvatarUploader
+
     validates_attachment_content_type :avatar, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
 

@@ -7,10 +7,14 @@ end
 gem 'mongoid', github: 'mongoid/mongoid'
 # Heroku gem
 gem 'rails_12factor'
-	# 01/13/2015: not using S3 any more. It's a pain to config.
-	# Switched to MongoLab Sandbox. Free 496Mb storage.
-		# Amazon S3
-		#gem 'aws-sdk'
+# Amazon S3 storage
+gem 'aws-s3'
+gem 'aws-sdk', '~> 1.57.0'
+gem 'trim_blobs'
+gem "paperclip_database", :git => "git://github.com/softace/paperclip_database.git"
+# 1/15/2015: MongoLab doesn't work with Heroku.
+# Heroku tech support recommanded Cloudinary.
+gem 'cloudinary'
 # Bootstrape gem
 gem 'bootstrap-sass', '~> 3.2.0'
 # SPA pages gem

@@ -1,0 +1,9 @@
+# config/s3.yml
+production:
+  access_key_id: AKIAJUDSWVDHUEI425JA
+  secret_access_key: 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
+  bucket: yearbookpix
+development:
+  access_key_id: AKIAJUDSWVDHUEI425JA
+  secret_access_key: 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
+  bucket: yearbookpix

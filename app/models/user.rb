@@ -13,7 +13,7 @@ class User
   field :avatar, type: String
 
   has_one :photo
-
+k
   has_secure_password
 
   validates_uniqueness_of :email

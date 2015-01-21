@@ -12,20 +12,16 @@ gem 'aws-s3'
 gem 'aws-sdk', '~> 1.57.0'
 gem 'trim_blobs'
 gem "paperclip_database", :git => "git://github.com/softace/paperclip_database.git"
-# 1/15/2015: MongoLab doesn't work with Heroku.
-# Heroku tech support recommanded Cloudinary.
-gem 'cloudinary'
+# Paperclip
+gem "paperclip", "~> 4.2"
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
 # Bootstrape gem
 gem 'bootstrap-sass', '~> 3.2.0'
 # SPA pages gem
 gem 'bower-rails'
 gem 'angular-rails-templates'
-# Paperclip
-gem "mongoid-paperclip", :require => "mongoid_paperclip"
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
-gem "paperclip", "~> 4.2"
 # GeoCoder
 gem 'geocoder'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

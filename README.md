@@ -77,6 +77,11 @@ Add this to user.rb model for Google map:
 For Heroku deployment, follow this:
 	https://github.com/ga-students/WDI_LA_10-11/blob/master/cheatsheets/heroku_deploy_for_rails_mongoid.md
 
-For photo hosting, MongoLab is used. Changed mongoid.yml:
-	from: uri: <%= ENV['MONGOHQ_URL'] %> 
-	to: uri: <%= ENV['MONGOLAB_URI'] %>	
+For photo hosted by Amazon S3. (Thank you Alex Abbott for the help.) 
+Gem used:
+	gem 'aws-s3'
+	gem 'aws-sdk', '~> 1.57.0'
+	gem 'trim_blobs'
+	gem "paperclip_database", :git => "git://github.com/softace/paperclip_database.git"
+Also see s3.yml and user.rb (line 27 to 38) for code on how to make s3 to work.
+

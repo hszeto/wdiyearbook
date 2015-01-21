@@ -29,12 +29,13 @@ class User
     :s3_credentials => "#{Rails.root}/config/s3.yml",
     :url =>':s3_domain_url',
     :path => "/:id.:extension",
-    :bucket => 'yearbookpix'
+    :bucket => 'yearbookpix',
+    :default_url => "ga_gear_logo.jpg"
 
     validates_attachment_content_type :avatar, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   def s3_credentials
     {:bucket => "yearbookpix", :access_key_id => ENV['AWS_ACCESS_KEY_ID'], :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']}
   end
-  
+
 end

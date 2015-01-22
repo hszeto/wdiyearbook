@@ -51,11 +51,10 @@ li{
 } 
 
  /* Styling for Google map */
- html, body, #map-canvas{
- 	height: 100%; 
- 	margin-left: 100px; 
- 	margin-right: 100px;
- 	margin-bottom: 20px;
+#map-canvas{
+	margin: 0 auto;
+ 	height: 40em; 
+ 	width: 50em;
  }
 
 

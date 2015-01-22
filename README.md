@@ -77,7 +77,7 @@ Add this to user.rb model for Google map:<br>
 For Heroku deployment, follow this:<br>
 	https://github.com/ga-students/WDI_LA_10-11/blob/master/cheatsheets/heroku_deploy_for_rails_mongoid.md<br>
 <br>
-For photo hosted by Amazon S3. (Thank you Alex Abbott for the help.) <br>
+For photo hosted by Amazon S3, wrx02@hotmail.com. (Thank you Alex Abbott for the help.) <br>
 Gem used:<br>
 	gem 'aws-s3'<br>
 	gem 'aws-sdk', '~> 1.57.0'<br>

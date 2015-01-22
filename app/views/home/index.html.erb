@@ -1,19 +1,21 @@
 <!-- List Everybody on Home Page -->
-<center>
-<div class="container-fluid" >
-<div class="row">
 
+<div class="container well">
+<div class="row">
+<center>
 <ul>
 	<% @users.each do |f| %>
-		<li class="col-md-4">
+		<li class="col-sm-6 col-md-4">
 			<%= image_tag(f.avatar, :class => "showimg") %><br>
 			<%= link_to f.name, user_path(f.id) %>
 		</li>
 	<% end %>
 </ul>
-
-</div>
-</div>
 </center>
-<hr>
+</div>
+</div>
+
+<div class="container well">
+	<center><h2>Where on Earth are we?</h2></center>
 	<%= render partial: 'gmap' %>  <!-- Google map partial code -->
+<div>
